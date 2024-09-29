@@ -1,0 +1,29 @@
+
+<div>
+    <button class="btn-perfil" (click)="ngOnInit()">Ver Otro Perfil</button>
+</div>
+
+<div *ngIf="person" class="perfil"> <!-- Muestra el contenido solo si `person` tiene datos -->
+    <h2>Perfil de Persona</h2>
+    <ul class="tarjeta">
+        <li class="imagen">
+          <img [src]="person.profile_photo['256x256']" alt="Foto de perfil" width="100">
+        </li>
+      <li>
+        <strong>Nombre Completo:</strong> {{ person.identification.full_name }}
+      </li>
+      <li>
+        <strong>Fecha de Nacimiento:</strong> {{ person.identification.date_of_birth }}
+      </li>
+      <li>
+        <strong>Edad:</strong> {{ person.identification.age }}
+      </li>
+      <li>
+        <strong>Género:</strong> {{ person.identification.gender }}
+      </li>
+      <li>
+        <strong>Nacionalidad:</strong> {{ person.identification.nationality }}
+      </li>
+    </ul>
+  </div>
+  
